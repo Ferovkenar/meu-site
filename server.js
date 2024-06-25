@@ -21,10 +21,20 @@ app.get('/', (req, res) => {
     res.redirect('/login');
 });
 
-// Rotas para registro, login e home
-app.get('/register', (req, res) => res.render('register'));
-app.get('/login', (req, res) => res.render('login'));
-app.get('/home', (req, res) => res.render('home'));
+// Rota para a página de registro
+app.get('/register', (req, res) => {
+    res.render('register'); // Renderiza a página register.html (ou similar)
+});
+
+// Rota para a página de login
+app.get('/login', (req, res) => {
+    res.render('login'); // Renderiza a página login.html (ou similar)
+});
+
+// Rota para a página home (exemplo)
+app.get('/home', (req, res) => {
+    res.render('home'); // Renderiza a página home.html (ou similar)
+});
 
 app.use('/auth', authRoutes);
 
