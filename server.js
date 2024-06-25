@@ -7,7 +7,7 @@ const authRoutes = require('./routes/authRoutes');
 const app = express();
 
 // Permitir requisições do frontend hospedado no GitHub Pages
-app.use(cors({ origin: 'https://username.github.io/reponame' }));
+app.use(cors({ origin: 'https://github.com/Ferovkenar/meu-site.git' }));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
